@@ -1,17 +1,11 @@
 let slideIndex = 1;
 const projImg = document.querySelector('.image-holder');
 const projshortDes = document.querySelector('.proj-short-des');
+projshortDes.innerHTML = projDesc[0];
 const projImages = ['https://image.thum.io/get/maxAge/12/width/700/https://serenuy.github.io/Travel-Dreams/index.html', 'https://i.imgur.com/lU8RFd8.png', 'https://i.imgur.com/nI7aCmS.png'];
 const projLinks = ['https://serenuy.github.io/Travel-Dreams/','https://serenuy.github.io/Revanents','https://expertece-draft1234.herokuapp.com/'];
-const projDesc = ['Startup Landing Page for Travelling<br> <em>Node.<span style="color:green;">js</span>, Vanilla <span style="color:yellow;">JS</span> + <span style="color: orange;">HTML</span> + <span style="color:blue;">CSS</span>, <span style="color:purple;">Bootstrap 5<span></em>', 'Revanents Directory<br> <em>Node.<span style="color:green;">js</span>, <span style="color:lightblue;">ReactJS</span>, Vanilla <span style="color:blue;">CSS</span></em>', 'E-commerce for ExperTece <br> <em>Node.<span style="color:green;">js</span>, <span style="color:orange;">Firebase</span>, <span style="color:plum">PHP</span>, Vanilla <span style="color:yellow;">JS</span> + <span style="color: orange;">HTML</span> + <span style="color:blue;">CSS</span>, <span style="color:purple;">Bootstrap 5</span></em>'];
+const projDesc = ['Travel Landing Page<br> <em>Node.<span style="color:green;">js</span>, Vanilla <span style="color:yellow;">JS</span> + <span style="color: orange;">HTML</span> + <span style="color:blue;">CSS</span>, <span style="color:purple;">Bootstrap 5<span></em>', 'Revanents Directory<br> <em>Node.<span style="color:green;">js</span>, <span style="color:lightblue;">ReactJS</span>, Vanilla <span style="color:blue;">CSS</span></em>', 'E-commerce for ExperTece, a small business <br> <em>Node.<span style="color:green;">js</span>, <span style="color:orange;">Firebase</span>, <span style="color:plum">PHP</span>, Vanilla <span style="color:yellow;">JS</span> + <span style="color: orange;">HTML</span> + <span style="color:blue;">CSS</span>, <span style="color:purple;">Bootstrap 5</span></em>'];
 
-const scrollDown = (element) => {
-	let scrollto = document.querySelector(element);
-	scrollto.scrollIntoView({
-		behavior:'smooth',
-		block:'start',
-		inline:'end'})
-};
 
 const plusSlide = (n) => {
 	if(slideIndex <= 3) slideIndex += n;
@@ -26,6 +20,14 @@ const showSlide = (n) => {
 
 projImg.onclick = () => {
 	window.open(projLinks[slideIndex-1], '_blank')
+};
+
+const scrollDown = (element) => {
+	let scrollto = document.querySelector(element);
+	scrollto.scrollIntoView({
+		behavior:'smooth',
+		block:'start',
+		inline:'end'})
 };
 
 const reveal = () => {
