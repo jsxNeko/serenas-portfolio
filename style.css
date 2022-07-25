@@ -7,11 +7,21 @@ body {
 	/*apply a custom cursor*/
 	/*custom scrollbar*/
 }
+
+p {
+	font-family: monospace;
+}
+
+.footer p {
+	display: inline;
+}
+
 h2, 
 nav,
 .intro-header p {
 	font-family: 'Press Start 2P', cursive;
 }
+
 video {
 	position: absolute;
 	width: 100%;
@@ -20,6 +30,7 @@ video {
 	z-index: 0;
 
 }
+
 .video-overlay {
 	position: absolute;
 	width: 100%;
@@ -27,6 +38,7 @@ video {
 	z-index: 1;
 	background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,1), rgba(0,0,0,1));
 }
+
 .overlay {
 	position: fixed;
 	width: 100%;
@@ -38,11 +50,13 @@ video {
 	background-color: rgba(0,0,0,0.5);
 	z-index: 1;
 }
+
 nav, 
 .about-main,
 .project-section {
 	position: relative;
 }
+
 .light-btn, 
 .intro-header p,
 .intro-header h1, 
@@ -50,12 +64,14 @@ nav,
 .right {
 	position: absolute;
 }
+
 .bi-arrow-down {
 	color: #ffffff;
 	font-size: 20px;
 	text-decoration: none;
 	cursor: pointer;
 }
+
 .light-btn, 
 .light-btn:focus {
 	padding: 10px;
@@ -65,25 +81,30 @@ nav,
 	background-color: none;
 	border: 1px solid white;
 }
+
 .light-btn:hover {
 	border-color: #ffffff;
 	animation: flash;
 	animation-duration: 2s;
 }
+
 nav {
 	font-size: 14px;
 }
+
 .nav-item a, 
 .right:hover, 
 .left:hover{
 	color: #ffffff;
 }
+
 .nav-item a:hover {
 	text-decoration: underline !important;
 	color: #ffffff;
 	animation: pulse;
 	animation-duration: 1s;
 }
+
 .intro-header h1, 
 .intro-header p {
 	top: 50%;
@@ -91,32 +112,39 @@ nav {
 	transform: translate(-50%, -50%);
 	color: #ffffff;
 }
+
 .intro-header p {
 	top: 55%;
 }
+
 .about-main {
 	color: #ffffff;
 	padding: 25px;
 	margin-top: 900px;
 }
+
 .about-desc, 
 .work-desc {
 	margin-bottom: 150px;
 }
+
 .about-desc p,
 .work-desc p {
 	font-size: 20px;
 }
+
 .social-icons p {
 	cursor: pointer;
 	display: inline;
 	padding: 5px;
 	font-size: 20px;
 }
+
 .social-icons p:hover {
 	color: #089AE8;
 	transition: 0.5s ease;
 }
+
 .project-section {
 	margin: 0 auto;
 	margin-top: 20px;
@@ -125,6 +153,7 @@ nav {
 	width: 500px;
 	height: 300px;
 }
+
 @media screen and (max-width: 700px){
 	.project-section,
 	.image-holder {
@@ -143,6 +172,7 @@ nav {
 		right: -30px !important;
 	}
 }
+
 .image-holder {
 	border: 1px solid white;
 	background-image:  url('https://image.thum.io/get/maxAge/12/width/700/https://serenuy.github.io/Travel-Dreams/index.html');
@@ -153,6 +183,7 @@ nav {
 	background-position: center;
 	cursor: pointer;
 }
+
 .intro-header h1 {
 	background-color: black;
 	padding: 100px;
@@ -162,6 +193,7 @@ nav {
 	text-align: center;
 	border: 1px solid white;
 }
+
 .intro-header p {
 	font-size: 15px;
 	padding: 50px;
@@ -171,27 +203,33 @@ nav {
 	text-align: center;
 	border: 1px solid black;
 }
+
 .left, 
 .right {
 	font-size: 30px;
 	color: #ffffff;
 	top: 40%;
 }
+
 .right {
 	right: -100px;
 }
+
 .left {
 	left: -100px;
 }
+
 .reveal {
 	transform: translateX(-150px);
 	opacity: 0;
 	transition: 0.5s all ease;
 }
+
 .reveal.active {
 	transform: translateY(0);
 	opacity: 1;
 }
+
 .light-btn, 
 nav, 
 .personal-intro, 
