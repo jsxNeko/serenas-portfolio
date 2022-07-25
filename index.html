@@ -10,8 +10,6 @@
 	<title>Serena Dean</title>
 </head>
 <body>
-	<!-- add arrow up button for bottom portion
-	or navbar to be sticky -->
 	<video playsinline autoplay muted loop>
 		<source src="https://assets.mixkit.co/videos/preview/mixkit-touring-a-symbolic-digital-world-of-artificial-intelligence-and-information-12765-large.mp4" type="video/mp4">
 	</video>
@@ -21,10 +19,10 @@
 
 	<nav class="nav justify-content-center text-uppercase">
 	  <li class="nav-item">
-	    <a class="nav-link" onclick="scrollDown('.about-main')">About</a>
+	    <a class="nav-link" onclick="scrolltoView('.about-main')">About</a>
 	  </li>
 	  <li class="nav-item">
-	    <a class="nav-link" onclick="scrollDown('.work-desc')">Projects</a>
+	    <a class="nav-link" onclick="scrolltoView('.work-desc')">Projects</a>
 	  </li>
 	</nav>
 
@@ -33,46 +31,47 @@
 			<div class="intro-header text-uppercase">
 				<h1>Serena Dean</h1>
 				<p>&lt;!-- Front End Developer --></p>
-
 			</div>		
-			<div><button onclick="scrollDown('.about-main')" class="btn light-btn rounded-5"><i class="bi bi-arrow-down"></i></button></div>
+			<div><button onclick="scrolltoView('.about-main')" class="btn light-btn rounded-5"><i class="bi bi-arrow-down"></i></button></div>
 		</div>
 	</section>
 
 	<section class="about-main">
-		<div class="container">
-			<div class="about-desc reveal">
-				<h2 class="text-center text-uppercase">Who Am I?</h2>
-				<p class="p-5 text-center">Hello. I'm Serena. Nice to meet you. I am a Senior at the University of Memphis and graduating 2022 of December with a Bachelors of Science degree in Computer Science. I am passionate about building websites that create an enjoyable experience. Whether it be very simple to minimalistic or creative and unique. I want to make your users experience easy to manuever without all the fustration. Check out my projects below.</p>
-				<p class="p-5 text-center">In my free time, I enjoy streaming video games and working to build my own 3D video game, and travelling domestically.</p>
-			</div>
-			<div class="work-desc reveal">
-				<h2 class="text-center text-uppercase">Projects</h2>
-				<div class="main-project">
-					<p class="mt-3 text-center proj-short-des"></p>
-					<div class="project-section">
-						<a href="#."><i class="left bi-caret-left" onclick="plusSlide(-1)"></i></a>
-						<p class="image-holder"></p>
-						<a href="#." class="right bi-caret-right" onclick="plusSlide(1)"></a>
-					</div>		
-				</div>
-			</div>
+		<div class="about-desc reveal">
+			<img src="avatar.jfif" id="avatar" width="300" height="300">
+			<h2 class="text-center text-uppercase">Who Am I?</h2>
+			<p class="p-5 text-center">Hello. I'm Serena. Nice to meet you. I am a Senior at the University of Memphis and graduating 2022 of December with a Bachelors of Science degree in Computer Science. I am passionate about building websites that create an enjoyable experience. Whether it be very simple to minimalistic or creative and unique. I want to make your users experience easy to manuever without all the fustration. Check out my projects below.</p>
+			<p class="p-5 text-center">In my free time, I enjoy streaming video games and working to build my own 3D video game, and travelling domestically.</p>
+		</div>
 
-			<div class="contact">
-				<h2 class="text-center text-uppercase mb-5">Where to find me!</h2>
-				<div class="social-icons text-center">
-				<p><i title="mailto:dserena01@yahoo.com" class="bi-envelope" onclick="window.open('mailto:dserena01@yahoo.com','_blank')"></i></p>
-				<p><i title="Github" class="bi-github" onclick="window.open('https://github.com/serenuy','_blank')"></i></p>
-				<p><i title="LinkedIn" class="bi-linkedin" onclick="window.open('https://www.linkedin.com/in/sdean00/','_blank')"></i></p>
-				<p><i title="Twitch" class="bi-twitch" onclick="window.open('https://www.twitch.tv/serenuy','_blank')"></i></p>
-				<p><i title="Instagram" class="bi-instagram" onclick="window.open('https://www.instagram.com/serenuy/','_blank')"></i></p>
-				</div>
-			</div>
-
-			<div class="footer text-center mt-5">
-				<p> Built with</p> ❤ <p> using <span style="color: orange;">HTML</span>, <span style="color: blue;">CSS</span>, <span style="color:yellow;">JS</span>, and <span style="color:purple;">Bootstrap 5</span> </p>
+		<div class="work-desc reveal">
+			<h2 class="text-center text-uppercase">Projects</h2>
+			<div class="main-project">
+				<p class="mt-3 text-center proj-short-des"></p>
+				<div class="project-section">
+					<a href="#."><i class="left bi-caret-left" onclick="plusSlide(-1)"></i></a>
+					<p class="image-holder"></p>
+					<a href="#." class="right bi-caret-right" onclick="plusSlide(1)"></a>
+				</div>		
 			</div>
 		</div>
+
+		<div class="contact">
+			<h2 class="text-center text-uppercase mb-5">Where to find me!</h2>
+			<div class="social-icons text-center">
+			<p><i title="mailto:dserena01@yahoo.com" class="bi-envelope" onclick="window.open('mailto:dserena01@yahoo.com','_blank')"></i></p>
+			<p><i title="Github" class="bi-github" onclick="window.open('https://github.com/serenuy','_blank')"></i></p>
+			<p><i title="LinkedIn" class="bi-linkedin" onclick="window.open('https://www.linkedin.com/in/sdean00/','_blank')"></i></p>
+			<p><i title="Twitch" class="bi-twitch" onclick="window.open('https://www.twitch.tv/serenuy','_blank')"></i></p>
+			<p><i title="Instagram" class="bi-instagram" onclick="window.open('https://www.instagram.com/serenuy/','_blank')"></i></p>
+			</div>
+		</div>
+
+		<div class="footer text-center mt-5">
+			<p> Built with</p> ❤ <p> using <span style="color: orange;">HTML</span>, <span style="color: blue;">CSS</span>, <span style="color:yellow;">JS</span>, and <span style="color:purple;">Bootstrap 5</span></p>
+		</div>
+
+		<div><button onclick="scrolltoView('.nav')" class="btn light-btn-2 rounded-5"><i class="bi bi-arrow-up"></i></button></div>
 	</section>
 
 	<script type="text/javascript" src="index.js"></script>
