@@ -348,21 +348,27 @@ nav,
 	z-index: 2;
 }
 
-@media screen and (max-width: 700px){
+@media (max-width: 760px){
 	.project-section,
 	.image-holder {
 		width: 100% !important;
 	}
+	.intro-header p,
 	.intro-header h1 {
-		position: relative;
-		font-size: 30px;
-		top: 150px;
-		left: 0;
-		width: 140%;
+		position: absolute;
+		padding: unset;
+		left: 50%;
+		width: 100%;
+		padding: 50px;
+		transform: translateX(-50%);
+	}
+	.intro-header h1 {
+		top: 15%;
+		padding: 100px;
 	}
 	.intro-header p {
-		margin-top: 50px;
-		width: 85%;
+		top: 40%;
+		width: 70%;
 	}
 	.left {
 		left: -30px;
@@ -372,5 +378,25 @@ nav,
 	}
 	.footer {
 		margin-bottom: 100px;
+	}
+}
+
+@media (min-width: 760px) and (max-width: 1000px) {
+	.intro-header p,
+	.intro-header h1 {
+		position: absolute;
+		padding: unset;
+		left: 50%;
+		width: 100%;
+		padding: 50px;
+		transform: translateX(-50%);
+	}
+	.intro-header h1 {
+		top: 15%;
+		padding: 100px;
+	}
+	.intro-header p {
+		top: 30%;
+		width: 70%;
 	}
 }
