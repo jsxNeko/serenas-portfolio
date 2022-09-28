@@ -1,0 +1,28 @@
+#alertContainer {
+	z-index: 2000;
+	position: absolute;
+
+}
+
+#alertBox {
+	opacity: 0;
+	background-color: black;
+	border: 2px solid #a244ff;
+  border-radius: 1rem;
+	padding: 20px 30px 30px 30px;
+	width: 360px;
+	height: 70px;
+	position: fixed;
+	top: 15%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: 0.5s;
+}
+
+#alertBox.show {
+	opacity:  1;
+}
+
+#alertMsg {
+	color: white;
+}

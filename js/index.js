@@ -11,9 +11,9 @@ const projLinks = ['https://serenuy.github.io/Travel-Dreams/',
 					'https://serenuy-facial-recognition.herokuapp.com/'];
 const projDesc = [
 	'Travel Landing Page<br> <em>Node.<span style="color:green;">js</span>, Vanilla <span style="color:yellow;">JS</span> + <span style="color: orange;">HTML</span> + <span style="color:blue;">CSS</span>, <span style="color:purple;">Bootstrap<span></em>', 
-	'Revanents Directory<br> <em>Node.<span style="color:green;">js</span>, React.<span style="color:lightblue;">js</span>, Vanilla <span style="color:blue;">CSS</span></em>', 
-	'E-commerce for ExperTece, a small business <br> <em>Node.<span style="color:green;">js</span>, <span style="color:orange;">Firebase | Express.js</span>, <span style="color:plum">PHP</span>, Vanilla <span style="color:yellow;">js</span> + <span style="color: orange;">HTML</span> + <span style="color:blue;">CSS</span>, <span style="color:purple;">Bootstrap</span></em>',
-	'Face Detector <br> <em>Node.<span style="color:green;">js</span></em>, <em>React<span style="color:lightblue;">.js</span></em>, <span style="color:orange;">Express.js</span>, <span style="color:lightblue;">PostgresSQL</span>' ,
+	'Revanents Directory<br> <em>Node.<span style="color:green;">js</span>, React.<span style="color:lightblue;">js</span>, <span style="color:blue;">CSS</span></em>', 
+	'E-commerce for ExperTece, a small business <br> <em>Node.<span style="color:green;">js</span>, <span style="color:orange;">Firebase | Express.js</span>, <span style="color:plum">PHP</span>, Vanilla <span style="color:yellow;">JS</span> + <span style="color: orange;">HTML</span> + <span style="color:blue;">CSS</span>, <span style="color:purple;">Bootstrap</span></em>',
+	'Face Detector <br> <em>Node.<span style="color:green;">js</span></em>, <em>React<span style="color:lightblue;">.js</span></em>, <span style="color:orange;">Express.js</span>, <span style="color:lightblue;">PostgreSQL</span>' ,
 	];
 
 projshortDes.innerHTML = projDesc[0];

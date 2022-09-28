@@ -13,7 +13,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: lightblue; 
+  background: #bc79ff; 
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -96,7 +96,7 @@ nav,
 	right: 25px;
 	width: 50px;
 	background-color: none;
-	border: 1px solid white;
+	border: 2px solid white;
 }
 
 .light-btn:hover,
@@ -231,7 +231,7 @@ nav,
 
 #avatar {
 	border-radius: 100em;
-	border: 1px white solid;
+	border: 2px white solid;
 	display: block;
 	margin: 0 auto;
 	margin-bottom: 50px;
@@ -297,6 +297,34 @@ nav,
 	background-repeat: no-repeat;
 	background-position: center;
 	cursor: pointer;
+}
+
+.env-btn {
+	border-radius: 100%;
+	border-color: black;
+}
+
+.bi-envelope-open {
+		font-size: 25px;
+}
+
+.env-btn:hover {
+		background-color: black;
+		color: white;
+		border-color: black;
+}
+
+.spinner-grow {
+	z-index: 3;
+	display: none;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.spinner-grow.show {
+	display: block;
 }
 
 .left, 
@@ -380,64 +408,6 @@ nav,
 	.footer {
 		margin-bottom: 100px;
 	}
-}
-
-/* new  */
-.env-btn {
-	border-radius: 100%;
-	border-color: black;
-}
-
-.bi-envelope-open {
-		font-size: 25px;
-}
-
-.env-btn:hover {
-		background-color: black;
-		color: white;
-		border-color: black;
-}
-
-#alertContainer {
-	z-index: 2000;
-	position: absolute;
-
-}
-
-#alertBox {
-	opacity: 0;
-	background-color: black;
-	border: 2px solid #a244ff;
-  border-radius: 1rem;
-	padding: 20px 30px 30px 30px;
-	width: 360px;
-	height: 70px;
-	position: fixed;
-	top: 15%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	transition: 0.5s;
-}
-
-#alertBox.show {
-	opacity:  1;
-}
-
-.spinner-grow {
-	z-index: 3;
-	display: none;
-	position: relative;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%,-50%);
-}
-
-.spinner-grow.show {
-	display: block;
-}
-
-#alertMsg {
-	color: white;
 }
 
 @media ((min-width: 760px) and (max-width: 1000px)) or
