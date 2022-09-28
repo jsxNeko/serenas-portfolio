@@ -67,3 +67,19 @@ const reveal = () => {
 }
 
 window.addEventListener('scroll',reveal);
+
+const copyEmailBtn = document.querySelector('#copyEmailBtn');
+const emailInput = document.querySelector('#emailInput');
+
+copyEmailBtn.addEventListener('click', () => {
+	emailInput.focus();
+	emailInput.select();
+
+	try {
+		let copyMsg = document.execCommand('copy');
+		let msg = copyMsg ? 'successful' : 'unsuccessful';
+		alertDisplay(msg, 'Successfully copied email!')
+	} catch (e) {
+		alertDisplay(msg, 'Could not copy something went wrong');
+	}
+})

@@ -10,14 +10,20 @@
 	<!-- End of Bootstrap CDN -->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+	<link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"/>
 	<title>Serena Dean</title>
 </head>
 <body>
+	<div id="alertContainer">
+		<div id="alertBox">
+			<p id="alertMsg"></p>
+		</div>
+	</div>
+
 	<video playsinline autoplay muted loop>
 		<source src="https://assets.mixkit.co/videos/preview/mixkit-touring-a-symbolic-digital-world-of-artificial-intelligence-and-information-12765-large.mp4" type="video/mp4">
 	</video>
 	<div class="video-overlay"></div>
-
 	<div class="overlay"></div>
 
 	<nav class="nav justify-content-center text-uppercase">
@@ -35,15 +41,23 @@
 				<h1 class="rotating-border name-rotation">Serena Dean</h1>
 				<p class="rotating-border info-rotation">&lt;!-- Front End Developer --></p>
 			</div>		
-			<div><button onclick="scrolltoView('.main')" class="btn light-btn rounded-5"><i class="bi bi-arrow-down"></i></button></div>
+			<div>
+				<button onclick="scrolltoView('.main')" class="btn light-btn rounded-5">
+					<i class="bi bi-arrow-down"></i>
+				</button>
+			</div>
 		</div>
 	</section>
 
 	<section class="main">
 		<div class="about-desc reveal">
-			<img src="avatar.jfif" id="avatar" width="300" height="300">
+			<img src="avatar.blank" id="avatar" width="300" height="300">
 			<h2 class="text-center text-uppercase">Who Am I?</h2>
-			<p class="p-5 text-center">Hello. I'm Serena. Nice to meet you. I am a Senior at the University of Memphis and graduating 2022 of December with a Bachelors of Science degree in Computer Science. I am passionate about building websites that create an enjoyable experience. Whether it be very simple to minimalistic or creative and unique. I want to make your users experience easy to manuever without all the fustration. Check out my projects below.</p>
+			<p class="p-5 text-center">Hello. I'm Serena. Nice to meet you. I am a Senior at the 
+			University of Memphis and graduating 2022 of December with a Bachelors of Science degree 
+			in Computer Science. I am passionate about building websites that create an enjoyable experience. 
+			Whether it be very simple to minimalistic or creative and unique. I want to make your users experience 
+			easy to manuever without all the fustration. Check out my projects below.</p>
 			<p class="p-5 text-center">In my free time, I enjoy streaming video games and working to build my own 3D video game, and travelling domestically.</p>
 		</div>
 
@@ -62,21 +76,74 @@
 		<div class="contact">
 			<h2 class="text-center text-uppercase mb-5">Where to find me!</h2>
 			<div class="social-icons text-center">
-			<p><i title="mailto:dserena01@yahoo.com" class="bi-envelope" onclick="window.open('mailto:dserena01@yahoo.com','_blank')"></i></p>
-			<p><i title="Github" class="bi-github" onclick="window.open('https://github.com/serenuy','_blank')"></i></p>
-			<p><i title="LinkedIn" class="bi-linkedin" onclick="window.open('https://www.linkedin.com/in/sdean00/','_blank')"></i></p>
-			<p><i title="Twitch" class="bi-twitch" onclick="window.open('https://www.twitch.tv/serenuy','_blank')"></i></p>
-			<p><i title="Instagram" class="bi-instagram" onclick="window.open('https://www.instagram.com/serenuy/','_blank')"></i></p>
+			<p>
+				<i title="mailto:dserena01@yahoo.com" class="bi-envelope" data-bs-toggle="modal" data-bs-target="#emailModal">
+					
+				</i>
+			</p>
+			<p>
+				<i title="Github" class="bi-github" onclick="window.open('https://github.com/serenuy','_blank')">
+					
+				</i>
+			</p>
+			<p>
+				<i title="LinkedIn" class="bi-linkedin" onclick="window.open('https://www.linkedin.com/in/sdean00/','_blank')">
+					
+				</i>
+			</p>
+			<p>
+				<i title="Twitch" class="bi-twitch" onclick="window.open('https://www.twitch.tv/serenuy','_blank')">
+					
+				</i>
+			</p>
+			<p>
+				<i title="Instagram" class="bi-instagram" onclick="window.open('https://www.instagram.com/serenuy/','_blank')">
+					
+				</i>
+			</p>
 			</div>
 		</div>
 
 		<div class="footer text-center mt-5">
-			<p> Built with gaming </p> ❤ <p> using <span style="color: orange;">HTML</span>, <span style="color: blue;">CSS</span>, <span style="color:yellow;">JS</span>, and <span style="color:purple;">Bootstrap</span></p>
+			<p> Built with </p> ❤ <p> using <span style="color: orange;">HTML</span>, <span style="color: blue;">CSS</span>, <span style="color:yellow;">JS</span>, and <span style="color:purple;">Bootstrap</span></p>
 		</div>
 
-		<div><button onclick="scrolltoView('.nav')" class="btn light-btn-2 rounded-5"><i class="bi bi-arrow-up"></i></button></div>
+		<div>
+			<button onclick="scrolltoView('.nav')" class="btn light-btn-2 rounded-5">
+				<i class="bi bi-arrow-up"></i>
+			</button>
+		</div>
 	</section>
 
+	<!-- Email Modal -->
+	<div class="modal fade" id="emailModal" tabindex="-1" aria-labelledby="emailModalLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-dialog-centered">
+	    <div class="modal-content">
+	      <div class="modal-header border-0">
+	      	<h5 class="modal-title">Copy Email</h5>
+	        <button type="button" class="btn-close br-100" data-bs-dismiss="modal" aria-label="Close"></button>
+	      </div>
+	      <div class="modal-body tc mt3">
+	      	<div class="input-group">
+	       		<input class="form-control br0" type="email" name="email" id="emailInput" value="dserena01@yahoo.com">
+	       		<div class="input-group-append">
+	       			<button class="input-group-text btn btn-dark br0" id="copyEmailBtn">Copy Email</button>
+	       		</div>
+	       	</div>
+	       	<p class="mt3">OR</p>
+	       	<div class="mt3">
+	       		<button class="btn btn-dark mb3 br-100" 
+	       		onclick="window.open('mailto:dserena01@yahoo.com','_blank')">
+	       			<i class="bi-envelope-open"></i>
+	       		</button>
+	       		<p>Open Email Client</p>
+	       	</div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
 	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/alert.js"></script>
 </body>
 </html>
