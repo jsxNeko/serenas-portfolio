@@ -19,6 +19,7 @@ const projDesc = [
 projshortDes.innerHTML = projDesc[0];
 projImg.style.backgroundImage = `url(${projImages[0]})`;
 
+// Go to next or previous slide
 const plusSlide = (n) => {
 	if(slideIndex <= 4) slideIndex += n;
 	if(slideIndex > 4) slideIndex = 1;
@@ -27,16 +28,32 @@ const plusSlide = (n) => {
 
 const showSlide = (n) => {
 	if(n < 1) {
+		let image = new Image();
 		projshortDes.innerHTML = projDesc[3];
-		projImg.style.backgroundImage = `url(${projImages[3]})`;
-		slideIndex = 4;
-		return;
+		document.querySelector('.spinner-grow').classList.add('show');
+		projImg.style.backgroundImage = 'black';
+		// Listen for image loading
+		image.addEventListener('load', () => {
+			document.querySelector('.spinner-grow').classList.remove('show');
+			projImg.style.backgroundImage = `url(${projImages[3]})`;
+		})
+		image.src = projImages[3];
+		slideIndex = 4;;
 	} else {	
+		let image = new Image();
 		projshortDes.innerHTML = projDesc[n-1];
-		projImg.style.backgroundImage = `url(${projImages[n-1]})`;
+		document.querySelector('.spinner-grow').classList.add('show');
+		projImg.style.backgroundImage = 'black';
+		// Listen for image loading
+		image.addEventListener('load', () => {
+			document.querySelector('.spinner-grow').classList.remove('show');
+			projImg.style.backgroundImage = `url(${projImages[n-1]})`;
+		})
+		image.src = projImages[n-1];
 	}
 };
 
+// Open project to another tab
 projImg.onclick = () => {
 	window.open(projLinks[slideIndex-1], '_blank')
 };

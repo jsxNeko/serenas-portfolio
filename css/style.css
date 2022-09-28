@@ -322,8 +322,7 @@ nav,
 	font-size: 20px;
 }
 
-.social-icons p:hover {
-	color: #089AE8;
+.social-icons p i:hover {
 	transition: 0.5s ease;
 }
 
@@ -422,6 +421,19 @@ nav,
 
 #alertBox.show {
 	opacity:  1;
+}
+
+.spinner-grow {
+	z-index: 3;
+	display: none;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.spinner-grow.show {
+	display: block;
 }
 
 #alertMsg {
