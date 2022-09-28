@@ -172,13 +172,13 @@ nav,
 }
 
 
-.circle-item {
+.square-item {
 	border: 1px solid white;
 	height: 150px;
 	width: 150px;
 	margin-top: 25px;
 }
-.circle-item p {
+.square-item p {
 	position: relative;
 	text-align: center;
 	padding: 10px;
