@@ -286,6 +286,10 @@ hr {
 	grid-row: 1;
 }
 
+.para-res {
+	width: 100%;
+}
+
 .about-desc p,
 .work-desc p {
 	font-size: 20px;
@@ -485,7 +489,7 @@ nav,
 @media ((min-width: 760px) and (max-width: 1000px)) or
 (max-width: 760px) {
 	.about-grid {
-		grid-template-columns: auto !important;
+		grid-template-columns: unset;
 	}
 	#alertBox {
 		width: 90vw;
