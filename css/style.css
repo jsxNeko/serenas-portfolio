@@ -484,6 +484,9 @@ nav,
 
 @media ((min-width: 760px) and (max-width: 1000px)) or
 (max-width: 760px) {
+	.about-desc {
+		width: 100% !important;
+	}
 	.about-grid {
 		grid-template-columns: auto;
 	}
