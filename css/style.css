@@ -281,11 +281,11 @@ hr {
 	margin-bottom: 150px;
 }
 
-.about-grid {
+/*.about-grid {
 	display: grid;
 	grid-template-columns: 500px auto 8px;
 	grid-row: 1;
-}
+}*/
 
 .about-desc p,
 .work-desc p {
