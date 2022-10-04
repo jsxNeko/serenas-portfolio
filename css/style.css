@@ -486,9 +486,8 @@ nav,
 	}
 }
 
-@media ((min-width: 760px) and (max-width: 1000px)) or
-(max-width: 760px) {
-	.about-grid {
+@media screen and (max-width: 767px) {
+		.about-grid {
 		grid-template-columns: repeat(1,2fr) !important;
 	}
 	#alertBox {
