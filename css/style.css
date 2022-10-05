@@ -407,7 +407,7 @@ hr {
 }
 
 .spinner-grow {
-	z-index: 3;
+	z-index: 10;
 	display: none;
 	position: relative;
 	top: 50%;
