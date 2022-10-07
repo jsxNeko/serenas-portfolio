@@ -39,12 +39,13 @@
 		<div class="container">
 			<div class="intro-header text-uppercase">
 				<div class="square-item"><p class="">// Serena Dean</p></div>
-				<div class="square-item"><p class="">&lt;!-- Front End Dev <br>--></p></div>
+				<div class="square-item"><p class="">// <br>Front End Dev</p></div>
 				<div class="square-item hover-bg-white hover-black pointer" onclick="scrolltoView('.main')"><p class="">/* <br>About<br> */</p></div>
-				<div class="square-item hover-bg-white hover-black pointer" onclick="scrolltoView('.work-desc')"><p class="">// Projects</p></div>
+				<div class="square-item hover-bg-white hover-black pointer" onclick="scrolltoView('.skillsContainer')"><p class="">/* Skills */</p></div>
+				<div class="square-item hover-bg-white hover-black pointer" onclick="scrolltoView('.work-desc')"><p class="">&lt;!-- Projects --></p></div>
 			</div>	
 			<div>
-				<button onclick="scrolltoView('.main')" class="btn light-btn rounded-5">
+				<button onclick="scrolltoView('.work-desc')" class="btn light-btn rounded-5">
 					<i class="bi bi-arrow-down"></i>
 				</button>
 			</div>
@@ -54,7 +55,7 @@
 	<section class="main">
 		<div class="about-desc reveal">
 			<div class="about-grid">
-				<div><img src="avatar2.jpg" id="avatar"></div>
+				<div><img src="avatar.jpg" id="avatar"></div>
 				<div class='para-res'>
 					<h2 class="text-center text-uppercase">My Story</h2>
 					<hr>
@@ -98,11 +99,16 @@
 							<br><span><ion-icon size="large" name="logo-github"></ion-icon></span>
 						</p>
 					</div>
+					<div class="hover-bg-white hover-black">
+						<p>MongoDB
+							<br><span><ion-icon size="large" name="logo-github"></ion-icon></span>
+						</p>
+					</div>
 				</div>
 			</div>
 		</div>
 
-		<div class="work-desc reveal mt5">
+		<div class="work-desc reveal	">
 			<h2 class="text-center text-uppercase">Projects</h2>
 			<div class="main-project">
 				<hr>
@@ -143,14 +149,12 @@
 			</div>
 		</div>
 
-		<div class="footer text-center mt-5">
-			<p> Designed by Serena Dean 2022 </p>
-		</div>
-
-		<div>
-			<button onclick="scrolltoView('.nav')" class="btn light-btn-2 rounded-5">
+		<button onclick="scrolltoView('.nav')" class="btn light-btn-2 rounded-5">
 				<i class="bi bi-arrow-up"></i>
-			</button>
+		</button>
+
+		<div class="footer text-center mt-5">
+			<p> Designed by <span class="blue pointer" onclick="window.open('https://github.com/serenuy/serenas-portfolio', '_blank')">Serena Dean</span> 2022 </p>
 		</div>
 	</section>
 

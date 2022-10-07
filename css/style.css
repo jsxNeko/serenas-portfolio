@@ -74,11 +74,11 @@ nav,
 
 /* Buttons */
 .light-btn,
-.light-btn-2,
 .left,
 .right {
 	position: absolute;
 }
+
 
 .bi-arrow-down,
 .bi-arrow-up {
@@ -105,6 +105,11 @@ nav,
 	border-color: #ffffff;
 	animation: flash;
 	animation-duration: 2s;
+}
+
+.light-btn-2 {
+	position: sticky;
+	float: right;
 }
 
 /* Navbar  */
@@ -280,6 +285,10 @@ hr {
 	margin-bottom: 150px;
 }
 
+.work-desc {
+	margin-top: 200px;
+}
+
 .about-grid {
 	display: grid;
 	grid-template-columns: 500px auto 8px;
@@ -360,7 +369,7 @@ hr {
 	grid-column: span 2;
 }
 
-.square div:last-child {
+.intro-header div:last-child {
 	display: block;
 	margin: 0 auto;
 	grid-column:  span 2 / span 2;
