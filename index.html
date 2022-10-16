@@ -39,10 +39,11 @@
 		<div class="container">
 			<div class="intro-header text-uppercase">
 				<div class="square-item"><p class="">// Serena Dean</p></div>
-				<div class="square-item"><p class="">// <br>Front End Dev</p></div>
-				<div class="square-item hover-bg-white hover-black pointer" onclick="scrolltoView('.main')"><p class="">/* <br>About<br> */</p></div>
-				<div class="square-item hover-bg-white hover-black pointer" onclick="scrolltoView('.skillsContainer')"><p class="">/* Skills */</p></div>
-				<div class="square-item hover-bg-white hover-black pointer" onclick="scrolltoView('.work-desc')"><p class="">&lt;!-- Projects --></p></div>
+				<div class="square-item"><p class="">// Front End Dev</p></div>
+				<div class="square-item menu"><p>MENU</p></div>
+				<div class="square-item hover-bg-white hover-black pointer" onclick="scrolltoView('.main')"><p class="">&lt;!-- About --></p></div>
+				<div class="square-item hover-bg-white hover-black pointer" onclick="scrolltoView('#skills')"><p class="">&lt;!-- Skills --></p></div>
+				<div class="square-item hover-bg-white hover-black pointer" onclick="scrolltoView('#project')"><p class="">&lt;!-- Projects --></p></div>
 			</div>	
 			<div>
 				<button onclick="scrolltoView('.work-desc')" class="btn light-btn rounded-5">
@@ -53,34 +54,36 @@
 	</section>
 
 	<section class="main">
-		<div class="about-desc reveal">
+		<div class="about-desc reveal mt5">
 			<div class="about-grid">
 				<div><img src="avatar.jpg" id="avatar"></div>
 				<div class='para-res'>
-					<h2 class="text-center text-uppercase">My Story</h2>
+					<h1 class="text-center text-uppercase">My Story</h1>
 					<hr>
-					<p class="p-5 text-center">Hello. I'm Serena. Nice to meet you. I am a Senior at the 
-					University of Memphis and graduating 2022 of December with a Bachelors of Science degree 
-					in Computer Science. I am passionate about building websites that create an enjoyable experience. 
+					<p class="p-5">Hello! I'm Serena, a Front-End Web Developer. From a 3D artist to creating codes and bringing them to life, I enjoy every aspect of designing websites including user-friendliness, attraction, easy-to-access, simplicity and more!
 					<br><br>
-					I first found my passion while taking a course called Programming Languages, we had to build our own grammar parser application using Django, after I got the fundamentals down of the backend, I had no idea what to do for the Front End and I did so much research finding out that I can literally do anything from a simple button click to animations. It's what you make it out to be and that's what I love about it. I'm able to make modern or outrageously creative applications with a lot of colors and animations. <b>Fun fact:</b> In my spare time, I create models in Blender3D and make emotes/portraits.<br>
-
-					Whether it be very simple to minimalistic or creative and unique. I want to make your users experience 
-					easy to manuever without all the frustration. Check out my projects below.</p>
+					I found my passion while taking a course called Programming Languages, where we had to build a grammar parsing application using Django. I learned a lot within that time period and that applications are what you make it out to be and that's what I love about it.
+					<br><br>
+					With that knowledge I've gained (still gaining), I'd like to continue this journey by becoming a part of the technology world where we can bring more awareness to the industry.
+					</p>
 				</div>
 			</div>
 		</div>
 
-		<div class="skillsContainer reveal">
+		<span id="skills"></span>
+		<div class="skillsContainer reveal mt5">
 			<div class='skillSet'>
-				<h2 class="text-uppercase tc">Skills</h2>
+				<h1 class="text-uppercase tc">Skills</h1>
 				<hr>
 				<div class="square mt4">
 					<div class="hover-bg-yellow hover-black">
-						<p>JS [Vanilla, React, Node]
-							<br><span><ion-icon size="medium" name="logo-javascript"></ion-icon></span>
-							<span><ion-icon size="medium" name="logo-react"></ion-icon></span>
-							<span><ion-icon size="medium" name="logo-nodejs"></ion-icon></span>
+						<p>JavaScript
+							<br><span><ion-icon size="large" name="logo-javascript"></ion-icon></span>
+						</p>
+					</div>
+					<div class="hover-bg-white hover-blue">
+						<p>React
+							<br><span><ion-icon size="large" name="logo-react"></ion-icon></span>
 						</p>
 					</div>
 					<div class="hover-bg-orange">
@@ -89,41 +92,43 @@
 					</p>
 					</div>
 					<div class="hover-bg-light-purple">
-						<p>CSS [Bootstrap]
+						<p>CSS
 							<br><span><ion-icon size="large" name="logo-css3"></ion-icon></span>
 						</p>
 					</div>
-					<div class="hover-bg-light-blue"><p>PostgreSQL</p></div>
-					<div class="hover-bg-white hover-black">
+					<div class="hover-bg-orange hover-black">
 						<p>Git
-							<br><span><ion-icon size="large" name="logo-github"></ion-icon></span>
+							<br><span><i class="bi-git" style="font-size:35px"></i></span>
 						</p>
 					</div>
-					<div class="hover-bg-white hover-black">
-						<p>MongoDB
+					<div class="hover-bg-orange hover-white">
+						<p>Firebase, PostgreSQL, MongoDB
+						<br><ion-icon size="large" name="server-outline"></ion-icon>
 						</p>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<div class="work-desc reveal	">
+		<span id="project"></span>
+		<div class="work-desc reveal">
 			<h2 class="text-center text-uppercase">Projects</h2>
 			<div class="main-project">
 				<hr>
-				<p class="mt4 text-center proj-short-des"></p>
+				<p class="text-center mt3 proj-short-des"></p>
 				<div class="project-section">
-					<a href="#."><i class="left bi-caret-left" onclick="plusSlide(-1)"></i></a>
+					<a href="#."><i class="left bi-arrow-left-circle" onclick="plusSlide(-1)"></i></a>
 					<p class="image-holder">
 						<span class="spinner-grow"></span>
 					</p>
-					<a href="#." class="right bi-caret-right" onclick="plusSlide(1)"></a>
-				</div>		
+					<a href="#." class="right bi-arrow-right-circle" onclick="plusSlide(1)"></a>
+				</div>
+				<p class="fw8 text-center proj-links"></p>
 			</div>
 		</div>
 
 		<div class="contact">
-			<h2 class="text-center text-uppercase mb-5">Where to find me!</h2>
+			<h2 class="text-center text-uppercase mb-3">Where to find me!</h2>
 			<div class="social-icons text-center">
 			<p>
 				<i title="mailto:dserena01@yahoo.com" class="bi-envelope hover-light-blue" data-bs-toggle="modal" data-bs-target="#emailModal">
@@ -146,15 +151,13 @@
 				</i>
 			</p>
 			</div>
+			<div class="footer text-center mt-5">
+				<p> Designed by <span class="blue pointer" onclick="window.open('https://github.com/serenuy/serenas-portfolio', '_blank')">Serena Dean</span> 2022 </p>
+			</div>
 		</div>
-
 		<button onclick="scrolltoView('.nav')" class="btn light-btn-2 rounded-5">
 				<i class="bi bi-arrow-up"></i>
-		</button>
-
-		<div class="footer text-center mt-5">
-			<p> Designed by <span class="blue pointer" onclick="window.open('https://github.com/serenuy/serenas-portfolio', '_blank')">Serena Dean</span> 2022 </p>
-		</div>
+		</button>	
 	</section>
 
 	<!-- Email Modal -->
@@ -162,10 +165,13 @@
 	  <div class="modal-dialog modal-dialog-centered">
 	    <div class="modal-content">
 	      <div class="modal-header border-0">
-	      	<h5 class="modal-title">Copy Email</h5>
+	      	<h5 class="modal-title">Get in touch!</h5>
 	        <button type="button" class="btn-close br-100" data-bs-dismiss="modal" aria-label="Close"></button>
 	      </div>
 	      <div class="modal-body tc mt3">
+	      	<p>Feel free to reach out to me with questions regarding my work or anything else.<br>
+	      	We can even grab a coffee and chat. Copy my email below or open the client to email me!
+	      	</p>
 	      	<div class="input-group">
 	       		<input class="form-control br0" type="email" name="email" id="emailInput" value="dserena01@yahoo.com">
 	       		<div class="input-group-append">

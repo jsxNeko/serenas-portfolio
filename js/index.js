@@ -1,19 +1,31 @@
 let slideIndex = 1;
 const projImg = document.querySelector('.image-holder');
 const projshortDes = document.querySelector('.proj-short-des');
-const projImages = ['https://image.thum.io/get/maxAge/12/width/700/https://serenuy.github.io/Travel-Dreams/index.html', 
-					'https://i.imgur.com/lU8RFd8.png', 
-					'https://i.imgur.com/nI7aCmS.png',
-					'https://i.imgur.com/35SHgDv.png'];
+const projLinkDoc = document.querySelector('.proj-links');
+const githubs = ['https://github.com/serenuy/Travel-Dreams',
+				'https://github.com/serenuy/Revanents',
+				'GITHUB Private (Client Reasons)',
+				'https://github.com/serenuy/facial-recognition-app'
+				];
+const projImages = ['https://i.imgur.com/1A01LBy.png', 
+					'https://i.imgur.com/cy77bGV.png', 
+					'https://i.imgur.com/cQCSdSe.png',
+					'https://i.imgur.com/VufSHLT.png'];
 const projLinks = ['https://serenuy.github.io/Travel-Dreams/',
 					'https://serenuy.github.io/Revanents',
-					'https://expertece-draft1234.herokuapp.com/',
+					'https://expertece-prototype.herokuapp.com/',
 					'https://serenuy-facial-recognition.herokuapp.com/'];
+
+const js = '<ion-icon class="yellow" size="large" name="logo-javascript"></ion-icon>';
+const html = '<ion-icon class="blue" size="large" name="logo-html5"></ion-icon>';
+const css = '<ion-icon class="orange" size="large" name="logo-css3"></ion-icon>';
+const react = '<ion-icon class="white" size="large" name="logo-react"></ion-icon>';
+
 const projDesc = [
-	'Travel Landing Page<br> <em>Node.<span style="color:green;">js</span>, Vanilla <span style="color:yellow;">JS</span> + <span style="color: orange;">HTML</span> + <span style="color:blue;">CSS</span>, <span style="color:purple;">Bootstrap<span></em>', 
-	'Revanents Directory<br> <em>Node.<span style="color:green;">js</span>, React.<span style="color:lightblue;">js</span>, <span style="color:blue;">CSS</span></em>', 
-	'E-commerce for ExperTece, a small business <br> <em>Node.<span style="color:green;">js</span>, <span style="color:orange;">Firebase | Express.js</span>, <span style="color:plum">PHP</span>, Vanilla <span style="color:yellow;">JS</span> + <span style="color: orange;">HTML</span> + <span style="color:blue;">CSS</span>, <span style="color:purple;">Bootstrap</span></em>',
-	'Face Detector <br> <em>Node.<span style="color:green;">js</span></em>, <em>React<span style="color:lightblue;">.js</span></em>, <span style="color:orange;">Express.js</span>, <span style="color:lightblue;">PostgreSQL</span>' ,
+	`<p>Travel Landing Page</p> <p class="tc mb-3" style="width:50%; display:block; margin:0 auto;">Want to find a new space to vacation but in the comfort of your home? This is a landing page made using vanilla HTML and CSS with bootstrap. Made for simplicity.</p> ${html} ${css}`,
+	`<p>Revanents Directory</p> <p class="tc mb-3" style="width:50%; display:block; margin:0 auto;">Who are all of the protagonists/antagonists in Code Vein? This directory application is built with ReactJS and the data is gathered from a JSON object I created. </p> ${react} ${css}`, 
+	`<p>E-commerce for ExperTece Full-Stack (current)</p>  <p class="tc mb-3" style="width:50%; display:block; margin:0 auto;">This store catalog application is built using ReactJS, allowing a user to sign-up and register. You have to sign up in order to complete a purchase. MongoDB is implemented to store users, products, and content. So far, this project has been the most exciting!</p> ${react} ${css} ${js} <br><span>Database: MongoDB</span> <br><span>API: Stripe</span>`,
+	`<p>Face Detector</p> <p class="tc mb-3" style="width:50%; display:block; margin:0 auto;">Want to know how many people were in that picture you took at the party? This application, built with ReactJS, allows you to copy your image URL's and upload them to see the works or technology and what it can do! It captures more than 1 face.</p> ${react} ${css} ${js} <br><span>Database: PostgreSQL</span> <br><span>API: Clarifai</span>` ,
 	];
 
 projshortDes.innerHTML = projDesc[0];
@@ -38,7 +50,8 @@ const showSlide = (n) => {
 			projImg.style.backgroundImage = `url(${projImages[3]})`;
 		})
 		image.src = projImages[3];
-		slideIndex = 4;;
+		slideIndex = 4;
+		projLinkDoc.innerHTML = `<p><a href="${projLinks[3]}">LIVE DEMO</a> | <a href="${githubs[3]}">GITHUB</a></p>`;
 	} else {	
 		let image = new Image();
 		projshortDes.innerHTML = projDesc[n-1];
@@ -50,8 +63,15 @@ const showSlide = (n) => {
 			projImg.style.backgroundImage = `url(${projImages[n-1]})`;
 		})
 		image.src = projImages[n-1];
+		if(slideIndex !== 3){
+			projLinkDoc.innerHTML = `<p><a href="${projLinks[slideIndex-1]}">LIVE DEMO</a> | <a href="${githubs[slideIndex-1]}">GITHUB</a></p>`;
+		} else {
+			projLinkDoc.innerHTML = `<p><a href="${projLinks[slideIndex-1]}">LIVE DEMO</a> | ${githubs[slideIndex-1]}`;
+		}
 	}
 };
+
+showSlide(3);
 
 // Open project to another tab
 projImg.onclick = () => {
@@ -62,8 +82,7 @@ const scrolltoView = (element) => {
 	let scrollto = document.querySelector(element);
 	scrollto.scrollIntoView({
 		behavior:'smooth',
-		block:'start',
-		inline:'end'})
+		block:'start'})
 };
 
 const reveal = () => {
