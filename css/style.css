@@ -467,6 +467,11 @@ hr {
 	margin: 0 auto;
 }
 
+.proj-short-des {
+	height: 150px;
+	overflow: auto;
+}
+
 /* Contact */
 .social-icons p {
 	cursor: pointer;
