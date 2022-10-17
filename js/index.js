@@ -51,7 +51,7 @@ const showSlide = (n) => {
 		})
 		image.src = projImages[3];
 		slideIndex = 4;
-		projLinkDoc.innerHTML = `<p><a href="${projLinks[3]}">LIVE DEMO</a> | <a href="${githubs[3]}">GITHUB</a></p>`;
+		projLinkDoc.innerHTML = `<p><a href="${projLinks[3]}" target="_blank">LIVE DEMO</a> | <a href="${githubs[3]}" target="_blank">GITHUB</a></p>`;
 	} else {	
 		let image = new Image();
 		projshortDes.innerHTML = projDesc[n-1];
@@ -64,9 +64,9 @@ const showSlide = (n) => {
 		})
 		image.src = projImages[n-1];
 		if(slideIndex !== 3){
-			projLinkDoc.innerHTML = `<p><a href="${projLinks[slideIndex-1]}">LIVE DEMO</a> | <a href="${githubs[slideIndex-1]}">GITHUB</a></p>`;
+			projLinkDoc.innerHTML = `<p><a href="${projLinks[slideIndex-1]}" target="_blank">LIVE DEMO</a> | <a href="${githubs[slideIndex-1]}" target="_blank">GITHUB</a></p>`;
 		} else {
-			projLinkDoc.innerHTML = `<p><a href="${projLinks[slideIndex-1]}">LIVE DEMO</a> | ${githubs[slideIndex-1]}`;
+			projLinkDoc.innerHTML = `<p><a href="${projLinks[slideIndex-1]}" target="_blank">LIVE DEMO</a> | ${githubs[slideIndex-1]}`;
 		}
 	}
 };
