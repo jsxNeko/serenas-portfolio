@@ -1,4 +1,4 @@
-let slideIndex = 1;
+let slideIndex = 3;
 const projImg = document.querySelector('.image-holder');
 const projshortDes = document.querySelector('.proj-short-des');
 const projLinkDoc = document.querySelector('.proj-links');
@@ -71,7 +71,7 @@ const showSlide = (n) => {
 	}
 };
 
-showSlide(3);
+showSlide(slideIndex);
 
 // Open project to another tab
 projImg.onclick = () => {
