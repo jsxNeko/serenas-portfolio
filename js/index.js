@@ -2,6 +2,9 @@ let slideIndex = 3;
 const projImg = document.querySelector('.image-holder');
 const projshortDes = document.querySelector('.proj-short-des');
 const projLinkDoc = document.querySelector('.project-links');
+const copyEmailBtn = document.querySelector('#copyEmailBtn');
+const emailInput = document.querySelector('#emailInput');
+
 const githubs = ['https://github.com/serenuy/Travel-Dreams',
 				'https://github.com/serenuy/Revanents',
 				'GITHUB Private (Client Reasons)',
@@ -31,6 +34,11 @@ const projDesc = [
 projshortDes.innerHTML = projDesc[0];
 projImg.style.backgroundImage = `url(${projImages[0]})`;
 
+// Open project to another tab
+projImg.onclick = () => {
+	window.open(projLinks[slideIndex-1], '_blank')
+};
+
 // Go to next or previous slide
 const plusSlide = (n) => {
 	if(slideIndex <= 4) slideIndex += n;
@@ -39,27 +47,34 @@ const plusSlide = (n) => {
 };
 
 const showSlide = (n) => {
+	const loader = document.querySelector('.spinner-grow');
+
+	// if user is clicking backwards or left arrow to against the first array
 	if(n < 1) {
+		// create an image
 		let image = new Image();
 		projshortDes.innerHTML = projDesc[3];
-		document.querySelector('.spinner-grow').classList.add('show');
-		projImg.style.backgroundImage = 'black';
+		loader.classList.add('show');
+		projImg.style.backgroundImage = '#000';
+
 		// Listen for image loading
 		image.addEventListener('load', () => {
-			document.querySelector('.spinner-grow').classList.remove('show');
+			loader.classList.remove('show');
 			projImg.style.backgroundImage = `url(${projImages[3]})`;
 		})
 		image.src = projImages[3];
 		slideIndex = 4;
 		projLinkDoc.innerHTML = `<p><a href="${projLinks[3]}" target="_blank">LIVE DEMO</a> | <a href="${githubs[3]}" target="_blank">GITHUB</a></p>`;
-	} else {	
+	} else {
+		// create an image
 		let image = new Image();
 		projshortDes.innerHTML = projDesc[n-1];
-		document.querySelector('.spinner-grow').classList.add('show');
-		projImg.style.backgroundImage = 'black';
+		loader.classList.add('show');
+		projImg.style.backgroundImage = '#000';
+
 		// Listen for image loading
 		image.addEventListener('load', () => {
-			document.querySelector('.spinner-grow').classList.remove('show');
+			loader.classList.remove('show');
 			projImg.style.backgroundImage = `url(${projImages[n-1]})`;
 		})
 		image.src = projImages[n-1];
@@ -71,13 +86,10 @@ const showSlide = (n) => {
 	}
 };
 
+// set default slide
 showSlide(slideIndex);
 
-// Open project to another tab
-projImg.onclick = () => {
-	window.open(projLinks[slideIndex-1], '_blank')
-};
-
+// scroll to contents element
 const scrolltoView = (element) => {
 	let scrollto = document.querySelector(element);
 	scrollto.scrollIntoView({
@@ -85,30 +97,29 @@ const scrolltoView = (element) => {
 		block:'start'})
 };
 
+// reveal content when in bound
 const reveal = () => {
-	const reveals = document.querySelectorAll('.reveal');
-	const ani_header = document.querySelector('.projectContainer h2');
-	const arrow = document.querySelector('.up-arrow');
-	for(let i = 0; i < reveals.length; i++){
+	const reveals_content = document.querySelectorAll('.reveal');
+	const animate_project_header = document.querySelector('.projectContainer h2');
+	const arrowBtn = document.querySelector('.up-arrow');
+
+	for(let i = 0; i < reveals_content.length; i++){
 		const windowHeight = window.innerHeight;
-		const elementTop = reveals[i].getBoundingClientRect().top;
+		const elementTop = reveals_content[i].getBoundingClientRect().top;
 		const elementVisible = 150;
 		if(elementTop < windowHeight - elementVisible){
-			arrow.style.display = "unset";
-			reveals[i].classList.add("active");
-			ani_header.classList.add('animate__animated', 'animate__bounce');
+			arrowBtn.style.display = "unset";
+			reveals_content[i].classList.add("active");
+			animate_project_header.classList.add('animate__animated', 'animate__bounce');
 		} else {
-			arrow.style.display = "none";
-			reveals[i].classList.remove("active");
-			ani_header.classList.remove('animate__animated', 'animate__bounce');
+			arrowBtn.style.display = "none";
+			reveals_content[i].classList.remove("active");
+			animate_project_header.classList.remove('animate__animated', 'animate__bounce');
 		}
 	}
-}
+};
 
-window.addEventListener('scroll',reveal);
-
-const copyEmailBtn = document.querySelector('#copyEmailBtn');
-const emailInput = document.querySelector('#emailInput');
+window.addEventListener('scroll', reveal);
 
 copyEmailBtn.addEventListener('click', () => {
 	emailInput.focus();
@@ -121,4 +132,4 @@ copyEmailBtn.addEventListener('click', () => {
 	} catch (e) {
 		alertDisplay(msg, 'Could not copy something went wrong');
 	}
-})
+});
