@@ -1,7 +1,7 @@
 let slideIndex = 3;
 const projImg = document.querySelector('.image-holder');
 const projshortDes = document.querySelector('.proj-short-des');
-const projLinkDoc = document.querySelector('.proj-links');
+const projLinkDoc = document.querySelector('.project-links');
 const githubs = ['https://github.com/serenuy/Travel-Dreams',
 				'https://github.com/serenuy/Revanents',
 				'GITHUB Private (Client Reasons)',
@@ -87,7 +87,7 @@ const scrolltoView = (element) => {
 
 const reveal = () => {
 	const reveals = document.querySelectorAll('.reveal');
-	const ani_header = document.querySelector('.work-desc h2');
+	const ani_header = document.querySelector('.projectContainer h2');
 	const arrow = document.querySelector('.up-arrow');
 	for(let i = 0; i < reveals.length; i++){
 		const windowHeight = window.innerHeight;

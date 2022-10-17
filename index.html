@@ -13,10 +13,9 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 	<link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"/>
 
-	<title>Serena Dean</title>
+	<title>Serena Dean Portfolio</title>
 </head>
 <body>
-	
 	<div>
 		<video playsinline autoplay muted loop>
 			<source src="https://assets.mixkit.co/videos/preview/mixkit-touring-a-symbolic-digital-world-of-artificial-intelligence-and-information-12765-large.mp4" type="video/mp4">
@@ -34,16 +33,16 @@
 
 	<section class="personal-intro">
 		<div class="container">
-			<div class="intro-header text-uppercase">
+			<div class="main-menu tu">
 				<div class="square-item"><p class="">// Serena Dean</p></div>
 				<div class="square-item"><p class="">// Front End Dev</p></div>
 				<div class="square-item menu"><p>MENU</p></div>
 				<div class="square-item hover-bg-white hover-black pointer" onclick="scrolltoView('.main')"><p class="">&lt;!-- About --></p></div>
-				<div class="square-item hover-bg-white hover-black pointer" onclick="scrolltoView('#skills')"><p class="">&lt;!-- Skills --></p></div>
-				<div class="square-item hover-bg-white hover-black pointer" onclick="scrolltoView('#project')"><p class="">&lt;!-- Projects --></p></div>
+				<div class="square-item hover-bg-white hover-black pointer" onclick="scrolltoView('#skills-start')"><p class="">&lt;!-- Skills --></p></div>
+				<div class="square-item hover-bg-white hover-black pointer" onclick="scrolltoView('#project-start')"><p class="">&lt;!-- Projects --></p></div>
 			</div>	
 			<div>
-				<button onclick="scrolltoView('.work-desc')" class="btn light-btn rounded-5">
+				<button onclick="scrolltoView('.projectContainer')" class="btn light-btn rounded-5">
 					<i class="bi bi-arrow-down pointer"></i>
 				</button>
 			</div>
@@ -54,8 +53,8 @@
 		<div class="about-desc reveal mt5">
 			<div class="about-grid">
 				<div><img src="avatar.jfpg" id="avatar"></div>
-				<div class='para-res'>
-					<h1 class="text-center text-uppercase">My Story</h1>
+				<div class='about-paragraph'>
+					<h1 class="tc tu">My Story</h1>
 					<hr>
 					<p class="p-5">Hello! I'm Serena, a Front-End Web Developer. From a 3D artist to creating codes and bringing them to life, I enjoy every aspect of designing websites including user-friendliness, attraction, easy-to-access, simplicity and more!
 					<br><br>
@@ -67,10 +66,10 @@
 			</div>
 		</div>
 
-		<span id="skills"></span>
+		<span id="skills-start"></span>
 		<div class="skillsContainer reveal mt5">
 			<div class='skillSet'>
-				<h1 class="text-uppercase tc">Skills</h1>
+				<h1 class="tu tc">Skills</h1>
 				<hr>
 				<div class="square mt4">
 					<div class="hover-bg-yellow hover-black">
@@ -107,26 +106,26 @@
 			</div>
 		</div>
 
-		<span id="project"></span>
-		<div class="work-desc reveal">
-			<h2 class="text-center text-uppercase">Projects</h2>
-			<div class="main-project">
+		<span id="project-start"></span>
+		<div class="projectContainer reveal">
+			<h2 class="tc tu">Projects</h2>
+			<div class="projectBox">
 				<hr>
-				<p class="text-center mt3 proj-short-des"></p>
-				<div class="project-section">
-					<a href="#."><i class="left bi-arrow-left-circle" onclick="plusSlide(-1)"></i></a>
+				<p class="tc mt3 proj-short-des"></p>
+				<div class="projectBox-details">
+					<a class="left bi-arrow-left-circle hover-white pointer"><i onclick="plusSlide(-1)"></i></a>
 					<p class="image-holder pointer">
 						<span class="spinner-grow"></span>
 					</p>
-					<a href="#." class="right bi-arrow-right-circle" onclick="plusSlide(1)"></a>
+					<a class="right bi-arrow-right-circle hover-white pointer" onclick="plusSlide(1)"></a>
 				</div>
-				<p class="fw8 text-center proj-links"></p>
+				<p class="fw8 tc project-links"></p>
 			</div>
 		</div>
 
 		<div class="contact">
-			<h2 class="text-center text-uppercase mb-3">Where to find me!</h2>
-			<div class="social-icons text-center">
+			<h2 class="tc tu mb-3">Where to find me!</h2>
+			<div class="social-icons tc">
 			<p>
 				<i title="mailto:dserena01@yahoo.com" class="bi-envelope hover-light-blue" data-bs-toggle="modal" data-bs-target="#emailModal">
 					
@@ -148,7 +147,7 @@
 				</i>
 			</p>
 			</div>
-			<div class="footer text-center mt-5">
+			<div class="footer tc mt-5">
 				<p> Designed by <span class="blue pointer" onclick="window.open('https://github.com/serenuy/serenas-portfolio', '_blank')">Serena Dean</span> 2022 </p>
 			</div>
 		</div>
@@ -178,7 +177,8 @@
 	       	</div>
 	       	<p class="mt3">OR</p>
 	       	<div class="mt3">
-	       		<button class="btn btn-dark mb3 br-100" 
+	       		<button 
+	       		class="btn btn-dark mb3 br-100" 
 	       		onclick="window.open('mailto:dserena01@yahoo.com','_blank')">
 	       			<i class="bi-envelope-open"></i>
 	       		</button>

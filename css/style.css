@@ -20,7 +20,7 @@ body {
 }
 
 a,
-.intro-header,
+.main-menu,
 .main,
 .left,
 .right,
@@ -39,7 +39,7 @@ a,
 h2,
 h1,
 h5,
-.intro-header p,
+.main-menu p,
 .modal,
 .modal-body p {
 	font-family: 'Bebas Neue', cursive !important;
@@ -53,7 +53,7 @@ hr,
 .proj-desc-info,
 .proj-short-des,
 #avatar,
-.intro-header div:last-child {
+.main-menu div:last-child {
 	display: block;
 	margin: 0 auto;
 }
@@ -71,7 +71,7 @@ video,
 .light-btn,
 .left,
 .right,
-.intro-header {
+.main-menu {
 	position: absolute;
 }
 
@@ -103,7 +103,7 @@ video {
 }
 
 .main,
-.project-section,
+.projectBox-details,
 .skillsContainer {
 	position: relative;
 }
@@ -144,7 +144,7 @@ video {
 	margin: 100px 0 0 120px;
 }
 
-.intro-header {
+.main-menu {
 	margin: 50px 0 0 0;
 	z-index: 9999;
 	display: flex;
@@ -196,7 +196,7 @@ hr {
 	opacity: 1;
 }
 
-.work-desc {
+.projectContainer {
 	margin: 170px 0 200px 0;
 }
 
@@ -206,12 +206,12 @@ hr {
 	grid-row: 1;
 }
 
-.para-res {
+.about-paragraph {
 	width: 100%;
 }
 
 .about-desc p,
-.work-desc p {
+.projectContainer p {
 	font-size: 20px;
 }
 
@@ -237,7 +237,7 @@ hr {
 .square-item p,
 .square div p,
 .spinner-grow,
-.intro-header {
+.main-menu {
 	transform: translate(-50%,-50%);
 }
 
@@ -253,12 +253,12 @@ hr {
 	grid-column: span 2;
 }
 
-.intro-header div:last-child {
+.main-menu div:last-child {
 	grid-column:  span 2 / span 2;
 }
 
 /* Project Showcase */
-.project-section {
+.projectBox-details {
 	margin: 0 auto;
 	margin-top: 20px;
 	margin-bottom: 50px;
@@ -267,7 +267,7 @@ hr {
 	height: 400px;
 }
 
-.main-project hr {
+.projectBox hr {
 	max-width: 20%;
 	border-color: #ff4323;
 }
@@ -358,14 +358,14 @@ hr {
 .light-btn-2,
 .personal-intro,
 .skillsContainer, 
-.intro-header h1, 
-.intro-header p,
+.main-menu h1, 
+.main-menu p,
 .main {
 	z-index: 2;
 }
 
 @media (max-width: 760px){
-	.project-section,
+	.projectBox-details,
 	.image-holder {
 		width: 90% !important;
 		margin: 0 auto;
@@ -392,7 +392,7 @@ hr {
 		grid-template-columns: repeat(2, 150px);
 	}
 
-	.project-section,
+	.projectBox-details,
 	.image-holder {
 		height: 280px;
 	}
@@ -413,7 +413,7 @@ hr {
 	#avatar {
 		top: unset;
 	}
-	.project-section,
+	.projectBox-details,
 	.image-holder {
 		width: 550px;
 	}
