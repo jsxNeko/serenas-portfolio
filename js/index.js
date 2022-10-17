@@ -88,14 +88,17 @@ const scrolltoView = (element) => {
 const reveal = () => {
 	const reveals = document.querySelectorAll('.reveal');
 	const ani_header = document.querySelector('.work-desc h2');
+	const arrow = document.querySelector('.up-arrow');
 	for(let i = 0; i < reveals.length; i++){
 		const windowHeight = window.innerHeight;
 		const elementTop = reveals[i].getBoundingClientRect().top;
 		const elementVisible = 150;
 		if(elementTop < windowHeight - elementVisible){
+			arrow.style.display = "unset";
 			reveals[i].classList.add("active");
 			ani_header.classList.add('animate__animated', 'animate__bounce');
 		} else {
+			arrow.style.display = "none";
 			reveals[i].classList.remove("active");
 			ani_header.classList.remove('animate__animated', 'animate__bounce');
 		}
