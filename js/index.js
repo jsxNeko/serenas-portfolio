@@ -25,10 +25,10 @@ const css = '<ion-icon class="orange" size="large" name="logo-css3"></ion-icon>'
 const react = '<ion-icon class="white" size="large" name="logo-react"></ion-icon>';
 
 const projDesc = [
-	`<p>Travel Landing Page</p> <p class="tc mb-3 proj-desc-info">Want to find a new space to vacation but in the comfort of your home? This is a landing page made using vanilla HTML and CSS with bootstrap. Made for simplicity.</p> ${html} ${css}`,
-	`<p>Revanents Directory</p> <p class="tc mb-3 proj-desc-info">Who are all of the protagonists/antagonists in Code Vein? This directory application is built with ReactJS and the data is gathered from a JSON object I created. </p> ${react} ${css}`, 
-	`<p>E-commerce for ExperTece Full-Stack (current)</p>  <p class="tc mb-3 proj-desc-info">This store catalog application is built using ReactJS, allowing a user to sign-up and register. You have to sign up in order to complete a purchase. MongoDB is implemented to store users, products, and content. So far, this project has been the most exciting!</p> ${react} ${css} ${js} <br><span>Database: MongoDB</span> <br><span>API: Stripe</span>`,
-	`<p>Face Detector</p> <p class="tc mb-3 proj-desc-info">Want to know how many people were in that picture you took at the party? This application, built with ReactJS and created taking the ZTM Academy course, allows you to copy your image URL's and upload them to see the works or technology and what it can do! It captures more than 1 face.</p> ${react} ${css} ${js} <br><span>Database: PostgreSQL</span> <br><span>API: Clarifai</span>` ,
+	`<p>Travel Landing Page</p> ${html} ${css} <p class="tc mb-3 proj-desc-info">Want to find a new space to vacation but in the comfort of your home? This is a landing page made using vanilla HTML and CSS with bootstrap. Made for simplicity.</p>`,
+	`<p>Revanents Directory</p> ${react} ${css} <p class="tc mb-3 proj-desc-info">Who are all of the protagonists/antagonists in Code Vein? This directory application is built with ReactJS and the data is gathered from a JSON object I created. </p>`, 
+	`<p>E-commerce for ExperTece Full-Stack (current)</p> ${react} ${css} ${js} <br><span>Database: MongoDB</span> <br><span>API: Stripe</span><br> <p class="tc mb-3 proj-desc-info">This store catalog application is built using ReactJS, allowing a user to sign-up and register. You have to sign up in order to complete a purchase. MongoDB is implemented to store users, products, and content. So far, this project has been the most exciting!</p>`,
+	`<p>Face Detector</p> ${react} ${css} ${js} <br><span>Database: PostgreSQL</span> <br><span>API: Clarifai</span><br> <p class="tc mb-3 proj-desc-info">Want to know how many people were in that picture you took at the party? This application, built with ReactJS and created taking the ZTM Academy course, allows you to copy your image URL's and upload them to see the works or technology and what it can do! It captures more than 1 face.</p>` ,
 	];
 
 projshortDes.innerHTML = projDesc[0];
@@ -48,7 +48,7 @@ const plusSlide = (n) => {
 
 const showSlide = (n) => {
 	const loader = document.querySelector('.spinner-grow');
-
+	projshortDes.scrollTop = 0;
 	// if user is clicking backwards or left arrow to against the first array
 	if(n < 1) {
 		// create an image
