@@ -5,17 +5,17 @@ const projLinkDoc = document.querySelector('.project-links');
 const copyEmailBtn = document.querySelector('#copyEmailBtn');
 const emailInput = document.querySelector('#emailInput');
 
-const githubs = ['https://github.com/serenuy/Travel-Dreams',
-				'https://github.com/serenuy/Revanents',
+const githubs = ['https://github.com/jsxNeko/Travel-Dreams',
+				'https://github.com/jsxNeko/Revanents',
 				'GITHUB Private (Client Reasons)',
-				'https://github.com/serenuy/facial-recognition-app'
+				'https://github.com/jsxNeko/facial-recognition-app'
 				];
 const projImages = ['https://i.imgur.com/1A01LBy.png', 
 					'https://i.imgur.com/cy77bGV.png', 
 					'https://i.imgur.com/cQCSdSe.png',
 					'https://i.imgur.com/VufSHLT.png'];
-const projLinks = ['https://serenuy.github.io/Travel-Dreams/',
-					'https://serenuy.github.io/Revanents',
+const projLinks = ['https://jsxNeko.github.io/Travel-Dreams/',
+					'https://jsxNeko.github.io/Revanents',
 					'https://expertece-prototype.herokuapp.com/',
 					'https://serenuy-facial-recognition.herokuapp.com/'];
 
