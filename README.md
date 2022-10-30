@@ -1,2 +1,2 @@
 # DEMO
-https://serenuy.github.io/serenas-portfolio/
+https://jsxneko.github.io/serenas-portfolio/
