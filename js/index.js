@@ -17,7 +17,7 @@ const projImages = ['https://i.imgur.com/1A01LBy.png',
 const projLinks = ['https://jsxNeko.github.io/Travel-Dreams/',
 					'https://jsxNeko.github.io/Revanents',
 					'https://expertece-prototype.herokuapp.com/',
-					'https://serenuy-facial-recognition.herokuapp.com/'];
+					'https://jsxneko-face-recognition.herokuapp.com/'];
 
 const js = '<ion-icon class="yellow" size="large" name="logo-javascript"></ion-icon>';
 const html = '<ion-icon class="blue" size="large" name="logo-html5"></ion-icon>';
