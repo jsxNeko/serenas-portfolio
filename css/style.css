@@ -24,14 +24,12 @@ a,
 .main,
 .left,
 .right,
-.bi-arrow-down,
 .bi-arrow-up,
 .env-btn:hover {
 	color: #fff;
 }
 
 a,
-.bi-arrow-down,
 .bi-arrow-up {
 	text-decoration: none;
 }
@@ -108,17 +106,13 @@ video {
 	position: relative;
 }
 
-
 /* Buttons */
-.bi-arrow-down,
 .bi-arrow-up {
 	font-size: 20px;
 }
 
 .light-btn,
-.light-btn-2, 
-.light-btn:focus,
-.light-btn-2:focus {
+.light-btn:focus {
 	padding: 10px;
 	bottom: 20px;
 	right: 25px;
@@ -127,15 +121,13 @@ video {
 	border: 2px solid #fff;
 }
 
-.light-btn:hover,
-.light-btn-2:hover  {
+.light-btn:hover,  {
 	border-color: #fff;
 	animation: flash;
 	animation-duration: 2s;
 }
 
-.light-btn-2 {
-	position: sticky;
+.light-btn {
 	float: right;
 }
 
@@ -357,7 +349,6 @@ hr {
 }
 
 .light-btn,
-.light-btn-2,
 .personal-intro,
 .skillsContainer, 
 .main-menu h1, 
