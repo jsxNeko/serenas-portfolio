@@ -5,17 +5,17 @@ const projLinkDoc = document.querySelector('.project-links');
 const copyEmailBtn = document.querySelector('#copyEmailBtn');
 const emailInput = document.querySelector('#emailInput');
 
-const githubs = ['https://github.com/jsxNeko/Travel-Dreams',
-				'https://github.com/jsxNeko/Revanents',
+const githubs = ['https://github.com/pixelRena/Travel-Dreams',
+				'https://github.com/pixelRena/Revanents',
 				'GITHUB Private (Client Reasons)',
-				'https://github.com/jsxNeko/facial-recognition-app'
+				'https://github.com/pixelRena/facial-recognition-app'
 				];
 const projImages = ['https://i.imgur.com/1A01LBy.png', 
 					'https://i.imgur.com/cy77bGV.png', 
 					'https://i.imgur.com/cQCSdSe.png',
 					'https://i.imgur.com/VufSHLT.png'];
 const projLinks = ['https://jsxNeko.github.io/Travel-Dreams/',
-					'https://jsxNeko.github.io/Revanents',
+					'https://pixelRena.github.io/Revanents',
 					'https://expertece-prototype.herokuapp.com/',
 					'https://jsxneko-face-recognition.herokuapp.com/'];
 
