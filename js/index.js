@@ -1,3 +1,8 @@
+window.onload = () => {
+	alert("You will now be taken to the updated portfolio URL. Give it a few minutes as it is hosted with Heroku, so if the application has not been opened, it is idle.");
+	window.location.href = "http://serenadean.herokuapp.com/";
+};
+
 let slideIndex = 3;
 const projImg = document.querySelector('.image-holder');
 const projshortDes = document.querySelector('.proj-short-des');
